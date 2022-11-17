@@ -12,8 +12,8 @@ class DatasetPreparedModel:
     month: int
     hour: int
     weekday: int
-    holiday: bool
-    working_day: bool
+    holiday: int
+    working_day: int
     weather_situation: int
 
     # Normalized temperature in Celsius. The values are derived via (t-t_min)/(t_max-t_min), t_min=-8, t_max=+39 (
