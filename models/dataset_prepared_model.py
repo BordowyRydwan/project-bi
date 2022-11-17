@@ -2,7 +2,7 @@ from dataclasses import dataclass
 
 
 @dataclass
-class DatasetCsvModel:
+class DatasetPreparedModel:
     id: int
     season: int
 
@@ -33,5 +33,12 @@ class DatasetCsvModel:
     casual_users: int
     registered_users: int
     total_users: int
+
+    # ADDITIONAL VARIABLES
+    casual_users_fraction: float
+    registered_users_fraction: float
+    weekday_normalized: float
+    hour_normalized: float
+    weather_situation_normalized: float
 
 
