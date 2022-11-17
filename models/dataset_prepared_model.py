@@ -40,5 +40,6 @@ class DatasetPreparedModel:
     weekday_normalized: float
     hour_normalized: float
     weather_situation_normalized: float
+    total_users_binarized: int
 
 
