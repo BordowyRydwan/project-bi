@@ -41,8 +41,6 @@ def model_list(csvModelList: List[DatasetCsvModel]) -> List[DatasetPreparedModel
     avg = mean(list(map(lambda x: x.total_users, csvModelList)))
     result = []
 
-    print(stdev(list(map(lambda x: x.total_users, csvModelList))))
-
     for item in csvModelList:
         result.append(model(item, avg))
 
