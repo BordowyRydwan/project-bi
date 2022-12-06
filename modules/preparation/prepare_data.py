@@ -3,6 +3,7 @@ from typing import List
 from models.dataset_csv_model import DatasetCsvModel
 from models.dataset_prepared_model import DatasetPreparedModel
 from numpy import mean
+from statistics import stdev
 
 MAX_WEEKDAY = 6
 MAX_HOUR = 23
@@ -39,6 +40,8 @@ def model(csvModel: DatasetCsvModel, avg: float) -> DatasetPreparedModel:
 def model_list(csvModelList: List[DatasetCsvModel]) -> List[DatasetPreparedModel]:
     avg = mean(list(map(lambda x: x.total_users, csvModelList)))
     result = []
+
+    print(stdev(list(map(lambda x: x.total_users, csvModelList))))
 
     for item in csvModelList:
         result.append(model(item, avg))
